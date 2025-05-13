@@ -21,7 +21,7 @@ p {
   background: #0064e7;
   border: none;
   border-radius: 15px;
-  padding: 10px 25px;
+  padding: 10px 20px;
   color: #fff;
   font-family: inherit;
   margin: 20px 10px;
@@ -37,6 +37,10 @@ p {
 
 .btn--red {
   background: #e74c3c;
+}
+
+.btn--orange {
+  background: #c57b0b;
 }
 
 .text-input {

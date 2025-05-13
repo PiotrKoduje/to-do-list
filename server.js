@@ -7,15 +7,16 @@ const server = app.listen(process.env.PORT || 8000, () => {
 });
 const io = socket(server);
 
-const tasks =[
-  { id: 1, name: 'Shopping'},
+const tasks = [
+  { id: 1, name: 'Shopping' },
+  { id: 2, name: 'Go out with a dog' }
 ];
 
 io.on('connection', (socket) => {
   socket.emit('updateData', tasks);
   socket.on('addTask', (task) => {
     tasks.push(task);
-    socket.broadcast.emit('addTask', task)
+    socket.broadcast.emit('addTask', task);
   });
   socket.on('removeTask', (id) => {
     const index = tasks.findIndex(task => task.id === id);
